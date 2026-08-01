@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ReviewStage/stage-cli
+name: stagereview
+description: >-
+  Local, open-source (MIT) CLI that organizes uncommitted or branch/PR git
+  changes into logical review "chapters" and opens them in a browser SPA.
+  Runs entirely on the developer's machine; works with any AI coding agent.
+homepage: https://stagereview.app/
+repository: https://github.com/ReviewStage/stage-cli
+license: MIT
+language: typescript
+runtime: node >=20
+install:
+  - method: npm
+    command: npm install -g stagereview
+  - method: agent-skill
+    command: npx skills add ReviewStage/stage-cli
+binary: stagereview
+agent_command: /stage-chapters
+commands:
+  - name: prep
+    usage: stagereview prep [base] [compare]
+    summary: >-
+      Auto-detect the base ref, compute the merge-base diff, filter
+      lockfiles/binaries, and write a formatted plain-text diff file; prints
+      the file path to stdout for the agent to analyze.
+  - name: show
+    usage: stagereview show <chapters-json> [base] [compare]
+    summary: >-
+      Validate hunk coverage of the agent-generated chapters and launch the
+      local browser SPA to review them.
+flags:
+  - flag: --base <ref>
+    description: 'Base ref to diff against (default: auto-detect main/master).'
+  - flag: --compare <ref>
+    description: Compare ref to diff against --base.
+  - flag: --ref <mode>
+    description: 'Diff scope: work (staged + unstaged + untracked), staged, or unstaged (default: auto-detect).'
+  - flag: --pr <number-or-url>
+    description: Review a GitHub pull request by number or URL (requires gh).
+config:
+  - file: .stageignore
+    description: >-
+      Repo-root .gitignore-style file to exclude files from diff analysis;
+      supports comments, blank lines, and negation (!) patterns.
+notes:
+  - CLI binary is catalogued in packages/stage-packages.yml (npm "stagereview").
+  - No public remote REST API; the CLI runs a local HTTP server on the developer's machine only.

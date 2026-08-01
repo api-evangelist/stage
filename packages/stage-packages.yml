@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/package/stagereview
+packages:
+  - language: javascript
+    registry: npm
+    name: stagereview
+    url: https://www.npmjs.com/package/stagereview
+    install: npm install -g stagereview
+    version: 0.1.4
+    license: MIT
+    official: true
+    kind: cli
+    binary: stagereview
+    description: Chapter-style code review against your local git branch. Ships the stagereview CLI binary and the stage-chapters agent skill.
+    repository: https://github.com/ReviewStage/stage-cli

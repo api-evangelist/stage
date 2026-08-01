@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ReviewStage/stage-cli/tree/main/skills/stage-chapters
+skills:
+  - file: stage-chapters.md
+    name: stage-chapters
+    description: Generate Stage chapters for the current local git branch and open them in a browser for review.
+    api: cli/stage-cli.yml
+    published: true
+    source: https://github.com/ReviewStage/stage-cli/blob/main/skills/stage-chapters/SKILL.md
+    install: npx skills add ReviewStage/stage-cli
+    operations:
+      - stagereview prep
+      - stagereview show

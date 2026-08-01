@@ -1,8 +1,29 @@
 aid: stage
 name: Stage
-description: Stage is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Stage is a code review tool that reorganizes local git changes and pull
+  requests into logical, ordered "chapters" so engineers can review and merge
+  changes far faster — a workflow built for teams shipping large volumes of
+  AI-generated code. Stage ships an open-source (MIT) command-line tool,
+  "stagereview", that runs entirely on the developer's machine and works with
+  any AI coding agent (Claude Code, Cursor, Codex, Gemini, opencode): it diffs
+  the current branch or a GitHub PR, clusters the hunks into narrated chapters
+  with a prologue, and opens them in a local browser SPA for review. The full
+  hosted Stage experience lives at stagereview.app. Stage is a Y Combinator
+  (Spring 2026) company founded by Charles Pan and Dean Stratakos.
 url: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://raw.githubusercontent.com/ReviewStage/stage-cli/main/assets/stage-mark.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +32,52 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Code Review
+- Developer Tools
+- CLI
+- AI Coding Agents
+- Pull Requests
+- Git
+- Software Development
 apis: []
+common:
+- type: DomainSecurity
+  url: security/stage-domain-security.yml
+- type: Website
+  url: https://stagereview.app/
+- type: Documentation
+  url: https://github.com/ReviewStage/stage-cli#readme
+- type: Blog
+  url: https://stagereview.app/blog
+- type: GitHubOrganization
+  url: https://github.com/ReviewStage
+- type: SourceCode
+  url: https://github.com/ReviewStage/stage-cli
+- type: Support
+  url: https://discord.gg/kfEa6a4wTp
+- type: Examples
+  url: https://stagereview.app/explore
+- type: Twitter
+  url: https://x.com/StageReviewApp
+- type: CLI
+  name: Stage CLI (stagereview)
+  url: cli/stage-cli.yml
+- type: Packages
+  name: Stage npm package
+  url: packages/stage-packages.yml
+- type: AgentSkill
+  name: stage-chapters skill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
