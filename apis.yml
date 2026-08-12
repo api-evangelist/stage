@@ -44,6 +44,9 @@ tags:
 - Software Development
 apis: []
 common:
+- type: License
+  name: MIT
+  url: https://github.com/ReviewStage/stage-cli/blob/main/LICENSE
 - type: DomainSecurity
   url: security/stage-domain-security.yml
 - type: Website
